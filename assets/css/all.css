@@ -32,16 +32,44 @@ body {
   background-size: var(--size-6);
 }
 
+.underlay {
+  position: relative;
+  inline-size: fit-content;
+}
+
+.underlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 17px 8px rgba(255, 255, 255, 0.8);
+}
+
+header {
+  margin-block-end: 2.5rem;
+}
+
 h1 {
   font-size: var(--size-4);
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  margin-top: 0;
+  margin-block-end: 0.25rem;
+  margin-block-start: 0;
   white-space: nowrap;
   color: #030712;
+  width: min-content;
+}
+
+#strapline {
+  white-space: nowrap;
+  font-size: var(--size-0);
+}
+
+#strapline span {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 17px 8px rgba(255, 255, 255, 0.7);
+  margin-inline: 0.2em;
+  transform: translateY(0.1em);
 }
 
 #tags {
@@ -52,12 +80,13 @@ h1 {
   list-style: none;
   user-select: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: balance;
   column-gap: 0.4em;
 }
 
 #tags li {
   display: inline-flex;
+  inline-size: fit-content;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 1);
   transition: background-color 400ms;
@@ -73,7 +102,7 @@ h1 {
 
 #tags abbr {
   display: inline-block;
-  margin-right: 0.05em;
+  margin-inline-end: 0.05em;
 }
 
 #tags a:hover em {
@@ -89,7 +118,9 @@ h1 {
 }
 
 #tags li * {
-  transition: color 200ms, opacity 500ms;
+  transition:
+    color 500ms,
+    opacity 500ms;
 }
 
 #tags:hover li:not(:hover) > span,

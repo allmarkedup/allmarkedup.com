@@ -23,11 +23,11 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  padding: var(--size-5);
+  padding: 4dvw;
   color: #6a7282;
   font-size: var(--size-4);
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   background: #fff url("../../assets/img/bg.png");
   background-size: var(--size-6);
 }

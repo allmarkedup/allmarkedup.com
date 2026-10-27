@@ -80,7 +80,7 @@ h1 {
   list-style: none;
   user-select: none;
   display: flex;
-  flex-wrap: balance;
+  flex-wrap: wrap balance;
   column-gap: 0.4em;
 }
 
@@ -98,6 +98,8 @@ h1 {
 #tags a:visited {
   color: #6a7282;
   text-decoration: none;
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 #tags abbr {
@@ -143,10 +145,6 @@ h1 {
 
 #tags a.strava:hover em {
   color: #fc5201;
-}
-
-#tags a.coveragebook:hover em {
-  color: #1b8871;
 }
 
 #tags a.github:hover em {

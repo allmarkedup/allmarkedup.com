@@ -80,7 +80,7 @@ h1 {
   list-style: none;
   user-select: none;
   display: flex;
-  flex-wrap: wrap balance;
+  flex-wrap: wrap;
   column-gap: 0.4em;
 }
 

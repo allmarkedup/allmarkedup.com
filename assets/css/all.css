@@ -63,7 +63,7 @@ h1 {
 
 #strapline {
   white-space: nowrap;
-  font-size: var(--size-0);
+  font-size: var(--size-2);
 }
 
 #strapline span {
